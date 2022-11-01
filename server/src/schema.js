@@ -8,6 +8,9 @@ const typeDefs = gql`
     thumbnail: String
     length: Int
     modulesCount: Int 
+    description: String
+    numberOfViews: Int
+    modules: [Module!]!
   }
   
   type Author {
@@ -18,6 +21,12 @@ const typeDefs = gql`
   
   type Query {
     tracksForHome: [Track!]!
+  }
+  
+  type Module {
+    id: ID!
+    title: String!
+    length: Int
   }
 `;
 
